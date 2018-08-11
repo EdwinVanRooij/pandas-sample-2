@@ -18,6 +18,8 @@ or (based upon which shell you're using)
 
 `source bin/activate.fish`
 
+> \* installing the virtualenv tool is different per operating system, google how to do this for yours
+
 ## Deployment
 
 Create package (run from `app/`)
@@ -28,6 +30,4 @@ Add libraries (run from `app/`)
 
 `zip -r9 PandasSample.zip ../lib/python3.6/site-packages/` **
 
-\* installing the virtualenv tool is different per operating system, google how to do this for yours
-
-\*\* this directory may be different for various operating systems, see [here](https://docs.aws.amazon.com/lambda/latest/dg/lambda-python-how-to-create-deployment-package.html#deployment-pkg-for-virtualenv)
+> \*\* this directory may be different for various operating systems, see [here](https://docs.aws.amazon.com/lambda/latest/dg/lambda-python-how-to-create-deployment-package.html#deployment-pkg-for-virtualenv)
