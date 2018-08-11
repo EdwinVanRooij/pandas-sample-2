@@ -28,9 +28,9 @@ Create package (run from `app/`)
 
 `zip -g PandasSample.zip main.py`
 
-Add libraries (run from `app/`)
+Add libraries (run from `lib/python3.6/site-packages`\*\*)
 
-`zip -r9 PandasSample.zip ../lib/python3.6/site-packages/` **
+`zip -r9 ../../../app/PandasSample.zip .`
 
 > \*\* this directory may be different for various operating systems, see [here](https://docs.aws.amazon.com/lambda/latest/dg/lambda-python-how-to-create-deployment-package.html#deployment-pkg-for-virtualenv)
 
