@@ -3,6 +3,7 @@
 __author__ = "Edwin van Rooij"
 
 import pandas as pd
+import json
 
 
 def main(event, context):
@@ -34,6 +35,12 @@ def main(event, context):
     print("\n\n" + numbers_title)
     print(numbers_dataframe.head())
 
+    # Return the DataFrames in JSON format
+    return json.dumps({
+        strings_title: strings_dataframe.to_json(),
+        numbers_title: numbers_dataframe.to_json()
+    })
+
 
 if __name__ == "__main__":
     event = {
@@ -42,4 +49,4 @@ if __name__ == "__main__":
         "seriesStrings": ["value1", "value2", "value3", "value4"],
         "seriesNumbers": [1, 2, 3, 4, 5]
     }
-    main(event, None)
+    print(main(event, None))

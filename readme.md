@@ -36,5 +36,6 @@ Add libraries (run from `lib/python3.6/site-packages`\*\*)
 
 
 
+__Below is deprecated.__
 _This is the final command to create a zip in one line, when running Linux with the Fish shell interpreter, from `app/`._
 `zip -g PandasSample.zip main.py; and zip -r9 PandasSample.zip ../lib/python3.6/site-packages/`
