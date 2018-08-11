@@ -36,10 +36,17 @@ def main(event, context):
     print(numbers_dataframe.head())
 
     # Return the DataFrames in JSON format
-    return json.dumps({
+    json_string = json.dumps({
         strings_title: strings_dataframe.to_json(),
         numbers_title: numbers_dataframe.to_json()
     })
+
+    # Must be in this format for Amazon API gateway
+    return {
+        'statusCode': 200,
+        'headers': {'Content-Type': 'application/json'},
+        'body': json_string
+    }
 
 
 if __name__ == "__main__":
