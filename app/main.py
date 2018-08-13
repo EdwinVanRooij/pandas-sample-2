@@ -9,8 +9,8 @@ import json
 def main(event, context):
     """Main application flow."""
     # Show all params for debugging
-    print(event)
-    print(context)
+    print("MyEvent: ", event)
+    print("MyContext: ", context)
 
     # Save titles to show later on
     strings_title = event.get("seriesStringsTitle")
