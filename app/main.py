@@ -8,6 +8,7 @@ import json
 
 def main(event, context):
     """Main application flow."""
+    # event = event.get('input').get('body')
     # event = json.loads(event.get('input').get('body'))
     #
     # # Show all params for debugging
@@ -44,11 +45,17 @@ def main(event, context):
     # })
 
     # Must be in this format for Amazon API gateway
+    # return {
+    #     'statusCode': 200,
+    #     'body': json.dumps({'input': 'something more',
+    #                         'busy': "something",
+    #                         'guest_email': "something"})
+    # }
     return {
         'statusCode': 200,
-        'body': json.dumps({'input': 'something more',
-                            'busy': "something",
-                            'guest_email': "something"})
+        'body': json.dumps({'input': event,
+                            'busy': 'busyy',
+                            'guest_email': 'emaill'})
     }
 
 
